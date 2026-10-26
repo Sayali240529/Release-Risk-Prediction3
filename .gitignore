@@ -7,7 +7,6 @@ venv/
 .venv/
 data/raw/
 frontend/node_modules/
-frontend/dist/
 .DS_Store
 *.log
 .idea/

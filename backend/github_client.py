@@ -4,6 +4,7 @@ Fetches real Pull Request and commit metadata from GitHub's REST API.
 """
 
 import math
+import os
 import re
 import requests
 from collections import Counter
@@ -59,8 +60,9 @@ def fetch_and_analyze_github_pr(
         "Accept": "application/vnd.github.v3+json",
         "User-Agent": "Release-Risk-Engine-MiniProject"
     }
-    if github_token:
-        headers["Authorization"] = f"token {github_token}"
+    active_token = github_token or os.getenv("GITHUB_TOKEN")
+    if active_token:
+        headers["Authorization"] = f"token {active_token}"
 
     # 1. Fetch Pull Request details
     pr_api_url = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pr_number}"

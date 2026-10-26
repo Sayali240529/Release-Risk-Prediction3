@@ -12,6 +12,10 @@ import json
 from pathlib import Path
 import pandas as pd
 import sys
+from dotenv import load_dotenv
+
+# Load local .env if present
+load_dotenv()
 
 # Ensure project root is in path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -205,4 +209,13 @@ def get_benchmarks():
 dist_dir = Path(__file__).parent.parent / "frontend" / "dist"
 if dist_dir.exists():
     app.mount("/", StaticFiles(directory=str(dist_dir), html=True), name="frontend")
+
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+    port = int(os.getenv("PORT", 8080))
+    host = os.getenv("HOST", "0.0.0.0")
+    uvicorn.run("backend.main:app", host=host, port=port, reload=False)
+
 
