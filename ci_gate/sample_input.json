@@ -1,0 +1,27 @@
+{
+  "commit_churn": 850,
+  "files_modified": 14,
+  "directory_entropy": 1.8,
+  "is_merge_commit": 1,
+  "author_commit_frequency": 0.02,
+  "ci_warning_count": 8,
+  "ci_error_count": 2,
+  "ci_test_duration_s": 112,
+  "ci_test_duration_delta": 0.87,
+  "ci_flaky_test_flag": 1,
+  "ci_stack_trace_flag": 1,
+  "ci_timeout_flag": 0,
+  "ci_oom_flag": 0,
+  "text_risk_keyword_count": 3,
+  "text_risk_score": 0.8,
+  "text_message_length": 45,
+  "text_has_hotfix": 1,
+  "text_has_migration": 1,
+  "text_has_revert": 0,
+  "text_has_security": 0,
+  "text_has_regression": 0,
+  "lines_added": 510,
+  "lines_deleted": 340,
+  "commit_message_length": 45
+}
+

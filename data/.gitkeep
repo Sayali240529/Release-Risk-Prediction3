@@ -1,0 +1,3 @@
+# data directory — raw CI logs and feature CSVs stored here
+# raw/ is git-ignored; features.csv is the shared handoff to Member 2
+

@@ -1,0 +1,6 @@
+Model / Configuration,PR-AUC,ROC-AUC,F1-Score
+1. Random Baseline,0.1482,0.4344,0.2295
+2. Heuristic (Churn > 300),0.4159,0.8048,0.6061
+3. Git Only (König et al. 2025),0.6151,0.8912,0.7097
+4. Git + CI Logs,0.5713,0.8837,0.625
+5. Full Multimodal (Proposed),0.5554,0.8613,0.6897

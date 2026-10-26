@@ -1,0 +1,16 @@
+catboost_info/
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+data/raw/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+

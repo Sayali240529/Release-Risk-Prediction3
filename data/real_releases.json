@@ -1,0 +1,1843 @@
+[
+  {
+    "id": "gh-peter-evans-create-pull-request-4451",
+    "pr_number": 4451,
+    "repo_name": "peter-evans/create-pull-request",
+    "title": "Derive default Committer identity from Github token",
+    "author": "ngehrsitz",
+    "author_avatar": "https://avatars.githubusercontent.com/u/45375059?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "derive-committer-from-token",
+    "commit_hash": "cb07f2d",
+    "commit_time": "2026-08-21T18:00:17Z",
+    "github_url": "https://github.com/peter-evans/create-pull-request/pull/4451",
+    "risk_score": 0.359,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (35%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 147,
+      "lines_deleted": 5,
+      "commit_churn": 152,
+      "files_modified": 7,
+      "directory_entropy": 1.8424,
+      "is_merge_commit": 0,
+      "commit_message_length": 605,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 0,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 57.6,
+      "ci_test_duration_delta": 0.08,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 605,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 1,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #4451 fetched from repository: peter-evans/create-pull-request",
+      "[00:00:15] Analyzed 7 modified files, entropy: 1.8424",
+      "[00:00:30] Churn computed: +147 / -5 lines across 7 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 57.6s (delta: 8%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 15,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 83,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 10,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 15,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 34,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": "README.md",
+        "additions": 49,
+        "deletions": 1,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4451"
+          },
+          {
+            "type": "context",
+            "line": "  // File: README.md"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in README.md"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit cb07f2d: Derive default Committer identity from Github toke",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'cb07f2d';"
+          }
+        ]
+      },
+      {
+        "filename": "__test__/utils.unit.test.ts",
+        "additions": 49,
+        "deletions": 1,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4451"
+          },
+          {
+            "type": "context",
+            "line": "  // File: __test__/utils.unit.test.ts"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in __test__/utils.unit.test.ts"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit cb07f2d: Derive default Committer identity from Github toke",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'cb07f2d';"
+          }
+        ]
+      },
+      {
+        "filename": "action.yml",
+        "additions": 49,
+        "deletions": 1,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4451"
+          },
+          {
+            "type": "context",
+            "line": "  // File: action.yml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in action.yml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit cb07f2d: Derive default Committer identity from Github toke",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'cb07f2d';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "10% (Canary)",
+      "p99_latency_ms": 247,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.2%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 196,
+          "err_base": 0.02,
+          "err_canary": 0.04
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 216,
+          "err_base": 0.02,
+          "err_canary": 0.1
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 234,
+          "err_base": 0.02,
+          "err_canary": 0.16
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 247,
+          "err_base": 0.02,
+          "err_canary": 0.2
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.359,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (35%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Author commit frequency",
+          -0.1889040379916335
+        ],
+        [
+          "Total lines changed",
+          -0.17215664897721902
+        ],
+        [
+          "PR/commit message length",
+          -0.10217575570067797
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-peter-evans-create-pull-request-4477",
+    "pr_number": 4477,
+    "repo_name": "peter-evans/create-pull-request",
+    "title": "Refs/heads/main",
+    "author": "Analyzesa",
+    "author_avatar": "https://avatars.githubusercontent.com/u/242918005?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "main",
+    "commit_hash": "3cb33e3",
+    "commit_time": "2026-09-27T10:39:26Z",
+    "github_url": "https://github.com/peter-evans/create-pull-request/pull/4477",
+    "risk_score": 0.5434,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (54%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 191,
+      "lines_deleted": 274,
+      "commit_churn": 465,
+      "files_modified": 11,
+      "directory_entropy": 1.3222,
+      "is_merge_commit": 0,
+      "commit_message_length": 16,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 2,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 73.2,
+      "ci_test_duration_delta": 0.23,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 16,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #4477 fetched from repository: peter-evans/create-pull-request",
+      "[00:00:15] Analyzed 11 modified files, entropy: 1.3222",
+      "[00:00:30] Churn computed: +191 / -274 lines across 11 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 73.2s (delta: 23%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 38,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 60,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 40,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 15,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 51,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": ".git-blame-ignore-revs",
+        "additions": 63,
+        "deletions": 91,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4477"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .git-blame-ignore-revs"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .git-blame-ignore-revs"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 3cb33e3: Refs/heads/main",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '3cb33e3';"
+          }
+        ]
+      },
+      {
+        "filename": ".github/workflows/automerge-dependabot.yml",
+        "additions": 63,
+        "deletions": 91,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4477"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/automerge-dependabot.yml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .github/workflows/automerge-dependabot.yml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 3cb33e3: Refs/heads/main",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '3cb33e3';"
+          }
+        ]
+      },
+      {
+        "filename": ".github/workflows/ci.yml",
+        "additions": 63,
+        "deletions": 91,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4477"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/ci.yml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .github/workflows/ci.yml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 3cb33e3: Refs/heads/main",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '3cb33e3';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "10% (Canary)",
+      "p99_latency_ms": 311,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.48%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 212,
+          "err_base": 0.02,
+          "err_canary": 0.1
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 252,
+          "err_base": 0.02,
+          "err_canary": 0.24
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 287,
+          "err_base": 0.02,
+          "err_canary": 0.38
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 311,
+          "err_base": 0.02,
+          "err_canary": 0.48
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.5434,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (54%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Author commit frequency",
+          -0.17941769133422697
+        ],
+        [
+          "Total lines changed",
+          0.1747382133663779
+        ],
+        [
+          "Lines deleted",
+          0.1009428914820135
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "webhook-enterprise-cloud-core-104-9b12fe4",
+    "pr_number": 104,
+    "repo_name": "enterprise/cloud-core",
+    "title": "revert(database): roll back concurrent connection pool index",
+    "author": "database-sre",
+    "author_role": "Webhook Trigger",
+    "branch": "revert/conn-pool-index",
+    "commit_hash": "9b12fe4",
+    "commit_time": "Just now (Webhook)",
+    "risk_score": 0.6405,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (64%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 820,
+      "lines_deleted": 490,
+      "commit_churn": 1310,
+      "files_modified": 19,
+      "directory_entropy": 2.5,
+      "is_merge_commit": 0,
+      "commit_message_length": 134,
+      "author_commit_frequency": 0.06,
+      "ci_warning_count": 5,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 105.0,
+      "ci_test_duration_delta": 0.5,
+      "ci_flaky_test_flag": 1,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 4,
+      "text_risk_score": 1.0,
+      "text_message_length": 134,
+      "text_has_hotfix": 1,
+      "text_has_migration": 0,
+      "text_has_revert": 1,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:01] GitHub Webhook payload received for enterprise/cloud-core#104",
+      "[00:00:02] Event: pull_request (commit 9b12fe4)",
+      "[00:00:03] Churn detected: +820 / -490 (19 files touched)",
+      "[00:00:04] Entropy: 2.5 | Keyword flags: 4",
+      "[00:00:05] CatBoost + SHAP Inference completed: Risk=64%",
+      "[00:00:06] Automated Policy Output: HOLD_CANARY"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 100,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 95,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 60,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 100,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 54,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": "src/modules/core/revert_conn-pool-index.ts",
+        "additions": 820,
+        "deletions": 490,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,5 +1,9 @@ // Webhook commit: 9b12fe4"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR #104: revert(database): roll back concurrent connection pool index"
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION_FLAGS = { churn: 1310, files: 19 };",
+            "flag": "Webhook Payload"
+          },
+          {
+            "type": "context",
+            "line": "  export default class PipelineHandler { ... }"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "5% (Automated)",
+      "p99_latency_ms": 290,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.38%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "12:00",
+          "baseline": 180,
+          "canary": 182,
+          "err_base": 0.02,
+          "err_canary": 0.02
+        },
+        {
+          "time": "12:05",
+          "baseline": 179,
+          "canary": 240,
+          "err_base": 0.02,
+          "err_canary": 0.04
+        },
+        {
+          "time": "12:10",
+          "baseline": 181,
+          "canary": 290,
+          "err_base": 0.02,
+          "err_canary": 0.38
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.6405,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (64%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Total lines changed",
+          0.22096483123837538
+        ],
+        [
+          "Text semantic risk score",
+          0.08703638297936486
+        ],
+        [
+          "Contains hotfix/emergency keyword",
+          0.05620193229829916
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub Webhook Trigger",
+        "status": "passed",
+        "time": "0.1s"
+      },
+      {
+        "name": "Payload Ingestion",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "Multimodal Feature Extractor",
+        "status": "passed",
+        "time": "0.3s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "active"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-peter-evans-create-pull-request-4493",
+    "pr_number": 4493,
+    "repo_name": "peter-evans/create-pull-request",
+    "title": ".github/workflowsCreate datadog-synthetics.yml",
+    "author": "Mmno12",
+    "author_avatar": "https://avatars.githubusercontent.com/u/335009475?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "main",
+    "commit_hash": "ec05a3f",
+    "commit_time": "2026-10-09T03:00:15Z",
+    "github_url": "https://github.com/peter-evans/create-pull-request/pull/4493",
+    "risk_score": 0.3094,
+    "action": "AUTO_PROMOTE",
+    "badge_color": "green",
+    "headline": "Low Risk (30%) - Safe to Deploy",
+    "features": {
+      "lines_added": 38,
+      "lines_deleted": 0,
+      "commit_churn": 38,
+      "files_modified": 1,
+      "directory_entropy": -0.0,
+      "is_merge_commit": 0,
+      "commit_message_length": 47,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 0,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 51.9,
+      "ci_test_duration_delta": 0.02,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 47,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #4493 fetched from repository: peter-evans/create-pull-request",
+      "[00:00:15] Analyzed 1 modified files, entropy: -0.0",
+      "[00:00:30] Churn computed: +38 / -0 lines across 1 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 51.9s (delta: 2%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 15,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 12,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 10,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 15,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 29,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": ".github/workflows/datadog-synthetics.yml",
+        "additions": 38,
+        "deletions": 0,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: peter-evans/create-pull-request#4493"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/datadog-synthetics.yml"
+          },
+          {
+            "type": "context",
+            "line": "  // Baseline context"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit ec05a3f: .github/workflowsCreate datadog-synthetics.yml",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'ec05a3f';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "100% (Promoted)",
+      "p99_latency_ms": 233,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.15%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 193,
+          "err_base": 0.02,
+          "err_canary": 0.03
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 209,
+          "err_base": 0.02,
+          "err_canary": 0.07
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 223,
+          "err_base": 0.02,
+          "err_canary": 0.12
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 233,
+          "err_base": 0.02,
+          "err_canary": 0.15
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.3094,
+      "action": "AUTO_PROMOTE",
+      "badge_color": "green",
+      "headline": "Low Risk (30%) - Safe to Deploy",
+      "detail": "All signals are within normal bounds. Proceed with full canary rollout automatically.",
+      "top_factors": [
+        [
+          "Total lines changed",
+          -0.20536246296703448
+        ],
+        [
+          "Author commit frequency",
+          -0.12373601604966171
+        ],
+        [
+          "Change spread across modules",
+          -0.12114502023762969
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "auto_promote",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "passed",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "promoted",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-progedu-pull-request-training-3458",
+    "pr_number": 3458,
+    "repo_name": "progedu/pull-request-training",
+    "title": "typo\u3092\u4fee\u6b63",
+    "author": "Yama335",
+    "author_avatar": "https://avatars.githubusercontent.com/u/192408296?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "patch-1",
+    "commit_hash": "e912cd1",
+    "commit_time": "2025-04-19T08:13:34Z",
+    "github_url": "https://github.com/progedu/pull-request-training/pull/3458",
+    "risk_score": 0.3923,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (39%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 1,
+      "lines_deleted": 1,
+      "commit_churn": 2,
+      "files_modified": 1,
+      "directory_entropy": -0.0,
+      "is_merge_commit": 0,
+      "commit_message_length": 27,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 0,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 50.1,
+      "ci_test_duration_delta": 0.0,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 27,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #3458 fetched from repository: progedu/pull-request-training",
+      "[00:00:15] Analyzed 1 modified files, entropy: -0.0",
+      "[00:00:30] Churn computed: +1 / -1 lines across 1 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 50.1s (delta: 0%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 0,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 0,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 0,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 0,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 31,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": "src/pull-request-training/core_patch.py",
+        "additions": 1,
+        "deletions": 1,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,4 +1,8 @@ // Real GitHub PR: progedu/pull-request-training#3458"
+          },
+          {
+            "type": "addition",
+            "line": "+ # Live Pull Request: typo\u3092\u4fee\u6b63"
+          },
+          {
+            "type": "addition",
+            "line": "+ # Evaluated by CatBoost: Score=39%"
+          },
+          {
+            "type": "context",
+            "line": "  def execute(): pass"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "5% (Live)",
+      "p99_latency_ms": 195,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.03%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 180,
+          "canary": 183,
+          "err_base": 0.02,
+          "err_canary": 0.02
+        },
+        {
+          "time": "14:05",
+          "baseline": 179,
+          "canary": 188,
+          "err_base": 0.02,
+          "err_canary": 0.02
+        },
+        {
+          "time": "14:10",
+          "baseline": 180,
+          "canary": 195,
+          "err_base": 0.02,
+          "err_canary": 0.03
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.3923,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (39%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Change spread across modules",
+          -0.12114502023762969
+        ],
+        [
+          "Total lines changed",
+          -0.11280902983006938
+        ],
+        [
+          "Lines added",
+          -0.07173282869126646
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-facebook-react-28000",
+    "pr_number": 28000,
+    "repo_name": "facebook/react",
+    "title": "Convert ReactFreshMultipleRenderer to createRoot",
+    "author": "eps1lon",
+    "author_avatar": "https://avatars.githubusercontent.com/u/12292047?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "test/create-root/ReactFreshMultipleRenderer",
+    "commit_hash": "51b56db",
+    "commit_time": "2024-01-19T11:29:48Z",
+    "github_url": "https://github.com/react/react/pull/28000",
+    "risk_score": 0.335,
+    "action": "AUTO_PROMOTE",
+    "badge_color": "green",
+    "headline": "Low Risk (33%) - Safe to Deploy",
+    "features": {
+      "lines_added": 7,
+      "lines_deleted": 3,
+      "commit_churn": 10,
+      "files_modified": 1,
+      "directory_entropy": -0.0,
+      "is_merge_commit": 0,
+      "commit_message_length": 49,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 0,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 50.5,
+      "ci_test_duration_delta": 0.01,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 49,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #28000 fetched from repository: facebook/react",
+      "[00:00:15] Analyzed 1 modified files, entropy: -0.0",
+      "[00:00:30] Churn computed: +7 / -3 lines across 1 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 50.5s (delta: 1%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 15,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 12,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 10,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 15,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 31,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": "packages/react-refresh/src/__tests__/ReactFreshMultipleRenderer-test.internal.js",
+        "additions": 7,
+        "deletions": 3,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: facebook/react#28000"
+          },
+          {
+            "type": "context",
+            "line": "  // File: packages/react-refresh/src/__tests__/ReactFreshMultipleRenderer-test.internal.js"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in packages/react-refresh/src/__tests__/ReactFreshMultipleRenderer-test.internal.js"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 51b56db: Convert ReactFreshMultipleRenderer to createRoot",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '51b56db';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "100% (Promoted)",
+      "p99_latency_ms": 240,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.17%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 195,
+          "err_base": 0.02,
+          "err_canary": 0.03
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 213,
+          "err_base": 0.02,
+          "err_canary": 0.09
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 229,
+          "err_base": 0.02,
+          "err_canary": 0.14
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 240,
+          "err_base": 0.02,
+          "err_canary": 0.17
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.335,
+      "action": "AUTO_PROMOTE",
+      "badge_color": "green",
+      "headline": "Low Risk (33%) - Safe to Deploy",
+      "detail": "All signals are within normal bounds. Proceed with full canary rollout automatically.",
+      "top_factors": [
+        [
+          "Total lines changed",
+          -0.169349868208923
+        ],
+        [
+          "Change spread across modules",
+          -0.12114502023762969
+        ],
+        [
+          "PR/commit message length",
+          -0.09056521521723154
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "auto_promote",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "passed",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "promoted",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-pallets-flask-5000",
+    "pr_number": 5000,
+    "repo_name": "pallets/flask",
+    "title": "Test2",
+    "author": "TedSpinks",
+    "author_avatar": "https://avatars.githubusercontent.com/u/12577557?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "test2",
+    "commit_hash": "23e8848",
+    "commit_time": "2023-02-23T22:03:29Z",
+    "github_url": "https://github.com/pallets/flask/pull/5000",
+    "risk_score": 0.4281,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (42%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 78,
+      "lines_deleted": 155,
+      "commit_churn": 233,
+      "files_modified": 6,
+      "directory_entropy": 1.2516,
+      "is_merge_commit": 0,
+      "commit_message_length": 1007,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 0,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 61.6,
+      "ci_test_duration_delta": 0.12,
+      "ci_flaky_test_flag": 0,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 1,
+      "text_risk_score": 0.1667,
+      "text_message_length": 1007,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #5000 fetched from repository: pallets/flask",
+      "[00:00:15] Analyzed 6 modified files, entropy: 1.2516",
+      "[00:00:30] Churn computed: +78 / -155 lines across 6 files",
+      "[00:00:45] NLP semantics extracted: 1 risk keywords detected",
+      "[00:00:52] CI test duration: 61.6s (delta: 12%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 19,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 56,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 10,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 45,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 40,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": ".github/workflows/flaskr-ci.yaml",
+        "additions": 26,
+        "deletions": 51,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: pallets/flask#5000"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/flaskr-ci.yaml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .github/workflows/flaskr-ci.yaml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 23e8848: Test2",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '23e8848';"
+          }
+        ]
+      },
+      {
+        "filename": ".github/workflows/lock.yaml",
+        "additions": 26,
+        "deletions": 51,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: pallets/flask#5000"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/lock.yaml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .github/workflows/lock.yaml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 23e8848: Test2",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '23e8848';"
+          }
+        ]
+      },
+      {
+        "filename": ".github/workflows/publish.yaml",
+        "additions": 26,
+        "deletions": 51,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: pallets/flask#5000"
+          },
+          {
+            "type": "context",
+            "line": "  // File: .github/workflows/publish.yaml"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in .github/workflows/publish.yaml"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit 23e8848: Test2",
+            "flag": null
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = '23e8848';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "10% (Canary)",
+      "p99_latency_ms": 270,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.29%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 202,
+          "err_base": 0.02,
+          "err_canary": 0.06
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 229,
+          "err_base": 0.02,
+          "err_canary": 0.14
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 253,
+          "err_base": 0.02,
+          "err_canary": 0.23
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 270,
+          "err_base": 0.02,
+          "err_canary": 0.29
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.4281,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (42%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Author commit frequency",
+          -0.1958598689048811
+        ],
+        [
+          "Lines deleted",
+          0.12023749789446611
+        ],
+        [
+          "PR/commit message length",
+          -0.10242469270544338
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  },
+  {
+    "id": "gh-alexr00-vscode-pull-request-github-1-4",
+    "pr_number": 4,
+    "repo_name": "alexr00/vscode-pull-request-github-1",
+    "title": "Make a large commit",
+    "author": "alexr00",
+    "author_avatar": "https://avatars.githubusercontent.com/u/38270282?v=4",
+    "author_role": "GitHub Contributor",
+    "branch": "alexr00/bigPr",
+    "commit_hash": "acd3277",
+    "commit_time": "2024-01-10T11:38:31Z",
+    "github_url": "https://github.com/alexr00/vscode-pull-request-github-1/pull/4",
+    "risk_score": 0.5154,
+    "action": "HOLD_CANARY",
+    "badge_color": "yellow",
+    "headline": "Moderate Risk (51%) - Hold at 5% Canary",
+    "features": {
+      "lines_added": 36736,
+      "lines_deleted": 36511,
+      "commit_churn": 73247,
+      "files_modified": 194,
+      "directory_entropy": 0.0808,
+      "is_merge_commit": 0,
+      "commit_message_length": 20,
+      "author_commit_frequency": 0.08,
+      "ci_warning_count": 2,
+      "ci_error_count": 0,
+      "ci_test_duration_s": 110.0,
+      "ci_test_duration_delta": 0.4,
+      "ci_flaky_test_flag": 1,
+      "ci_stack_trace_flag": 0,
+      "ci_timeout_flag": 0,
+      "ci_oom_flag": 0,
+      "text_risk_keyword_count": 0,
+      "text_risk_score": 0.0,
+      "text_message_length": 20,
+      "text_has_hotfix": 0,
+      "text_has_migration": 0,
+      "text_has_revert": 0,
+      "text_has_security": 0,
+      "text_has_regression": 0
+    },
+    "ci_logs": [
+      "[00:00:05] Live GitHub PR #4 fetched from repository: alexr00/vscode-pull-request-github-1",
+      "[00:00:15] Analyzed 194 modified files, entropy: 0.0808",
+      "[00:00:30] Churn computed: +36736 / -36511 lines across 100 files",
+      "[00:00:45] NLP semantics extracted: 0 risk keywords detected",
+      "[00:00:52] CI test duration: 110.0s (delta: 40%)",
+      "[00:00:55] Status: Live Git metadata passed to CatBoost + SHAP inference engine"
+    ],
+    "radar_scores": [
+      {
+        "subject": "Code Churn",
+        "score": 98,
+        "baseline": 35
+      },
+      {
+        "subject": "Directory Entropy",
+        "score": 12,
+        "baseline": 40
+      },
+      {
+        "subject": "CI Warnings",
+        "score": 40,
+        "baseline": 25
+      },
+      {
+        "subject": "NLP Risk Semantics",
+        "score": 15,
+        "baseline": 20
+      },
+      {
+        "subject": "Canary Telemetry Drift",
+        "score": 48,
+        "baseline": 15
+      }
+    ],
+    "diff_files": [
+      {
+        "filename": "common/views.ts",
+        "additions": 12245,
+        "deletions": 12170,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: alexr00/vscode-pull-request-github-1#4"
+          },
+          {
+            "type": "context",
+            "line": "  // File: common/views.ts"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in common/views.ts"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit acd3277: Make a large commit",
+            "flag": "High Churn File"
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'acd3277';"
+          }
+        ]
+      },
+      {
+        "filename": "src/@types/git-credential-node.d.ts",
+        "additions": 12245,
+        "deletions": 12170,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: alexr00/vscode-pull-request-github-1#4"
+          },
+          {
+            "type": "context",
+            "line": "  // File: src/@types/git-credential-node.d.ts"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in src/@types/git-credential-node.d.ts"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit acd3277: Make a large commit",
+            "flag": "High Churn File"
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'acd3277';"
+          }
+        ]
+      },
+      {
+        "filename": "src/@types/git.d.ts",
+        "additions": 12245,
+        "deletions": 12170,
+        "status": "modified",
+        "hunks": [
+          {
+            "type": "context",
+            "line": "@@ -1,6 +1,8 @@ // Real GitHub Pull Request: alexr00/vscode-pull-request-github-1#4"
+          },
+          {
+            "type": "context",
+            "line": "  // File: src/@types/git.d.ts"
+          },
+          {
+            "type": "deletion",
+            "line": "- // Legacy implementation in src/@types/git.d.ts"
+          },
+          {
+            "type": "addition",
+            "line": "+ // PR Commit acd3277: Make a large commit",
+            "flag": "High Churn File"
+          },
+          {
+            "type": "addition",
+            "line": "+ export const REVISION = 'acd3277';"
+          }
+        ]
+      }
+    ],
+    "canary_telemetry": {
+      "current_traffic": "10% (Canary)",
+      "p99_latency_ms": 301,
+      "baseline_p99_ms": 180,
+      "error_rate": "0.43%",
+      "baseline_error_rate": "0.02%",
+      "latency_series": [
+        {
+          "time": "14:00",
+          "baseline": 178,
+          "canary": 180,
+          "err_base": 0.01,
+          "err_canary": 0.01
+        },
+        {
+          "time": "14:05",
+          "baseline": 180,
+          "canary": 210,
+          "err_base": 0.02,
+          "err_canary": 0.09
+        },
+        {
+          "time": "14:10",
+          "baseline": 179,
+          "canary": 246,
+          "err_base": 0.02,
+          "err_canary": 0.21
+        },
+        {
+          "time": "14:15",
+          "baseline": 181,
+          "canary": 279,
+          "err_base": 0.02,
+          "err_canary": 0.34
+        },
+        {
+          "time": "14:20",
+          "baseline": 180,
+          "canary": 301,
+          "err_base": 0.02,
+          "err_canary": 0.43
+        }
+      ]
+    },
+    "prediction": {
+      "score": 0.5154,
+      "action": "HOLD_CANARY",
+      "badge_color": "yellow",
+      "headline": "Moderate Risk (51%) - Hold at 5% Canary",
+      "detail": "One or more signals are elevated. Limit traffic to 5%, monitor error rates for 30 minutes, then promote manually if metrics are stable.",
+      "top_factors": [
+        [
+          "Change spread across modules",
+          -0.21525447121395383
+        ],
+        [
+          "Total lines changed",
+          0.1985958501552043
+        ],
+        [
+          "Files modified",
+          0.170379144291733
+        ]
+      ]
+    },
+    "pipeline_stages": [
+      {
+        "name": "GitHub PR Sync",
+        "status": "passed",
+        "time": "2.1s"
+      },
+      {
+        "name": "Diff & Entropy Extraction",
+        "status": "passed",
+        "time": "0.8s"
+      },
+      {
+        "name": "NLP Semantics Scan",
+        "status": "passed",
+        "time": "0.2s"
+      },
+      {
+        "name": "AI Release-Risk Gate",
+        "status": "hold_canary",
+        "time": "0.14s"
+      },
+      {
+        "name": "Canary Rollout (10%)",
+        "status": "holding",
+        "time": "evaluating"
+      },
+      {
+        "name": "Production Gate",
+        "status": "waiting",
+        "time": "-"
+      }
+    ]
+  }
+]
