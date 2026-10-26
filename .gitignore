@@ -2,7 +2,6 @@ catboost_info/
 __pycache__/
 *.py[cod]
 *.pyo
-.env
 venv/
 .venv/
 data/raw/
