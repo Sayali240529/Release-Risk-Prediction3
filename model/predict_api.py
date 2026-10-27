@@ -46,6 +46,10 @@ def predict(features_dict: dict) -> dict:
 
     explainer = _explainer_artifact["explainer"]
     labels = _explainer_artifact["feature_labels"]
+    # Explainers saved by older SHAP releases may not include this attribute.
+    # SHAP 0.46 reads it when calling a deserialized TreeExplainer.
+    if not hasattr(explainer, "approximate"):
+        explainer.approximate = False
     sv = explainer(X)
     vals = sv.values[0]
     if vals.ndim == 2:
